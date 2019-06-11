@@ -1,18 +1,28 @@
 body {
 	font-size: 15px;
+	margin-top: 2rem;
 	display: flex;
 	justify-content: center;
+	background-color: #e6e1c5;
 }
 
-.App {
+#inputDisplayer {
 	display: block;
 	width: 33rem;
-	height: 40rem;
-	background-color: gray;
+	height: 37rem;
+	background-color: #80a4ed;
 	overflow-x: hidden;
 	overflow-y: auto;
+	border: solid;
+	border-color: #395c6b;
+	border-width: 1rem;
+	border-radius: 0.1rem;
+
+	div {
+		padding: 0.1rem 1rem 0.1rem 1rem;
+	}
 
 	:last-child {
-		background-color: aqua;
+		background-color: #d4cb92;
 	}
 }

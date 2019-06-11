@@ -9,13 +9,29 @@ class App extends Component {
 
 	eventHandler = (e) => {
 		e.persist();
+
+		switch (e.nativeEvent) {
+			case MouseEvent:
+				break;
+
+			case KeyboardEvent:
+				break;
+
+			case WheelEvent:
+				break;
+			default:
+		}
+
+		console.log(e);
 		let a = e.timeStamp;
 		let str = (a - prev).toFixed(3).toString();
 		prev = a;
-		const display = document.getElementById('1234');
+		const display = document.getElementById('inputDisplayer');
 		const msg = document.createElement('div');
+
 		msg.innerText = str;
 		display.append(msg);
+		display.scrollTop = display.scrollHeight;
 	};
 
 	render() {
@@ -24,9 +40,8 @@ class App extends Component {
 		// });
 		return (
 			<div
-				id="1234"
+				id="inputDisplayer"
 				tabIndex="0"
-				className="App"
 				onKeyDown={this.eventHandler}
 				onKeyUp={this.eventHandler}
 				onMouseDown={this.eventHandler}
