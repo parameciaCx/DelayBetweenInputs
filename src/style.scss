@@ -46,6 +46,9 @@ h1 {
 		transparent
 	);
 }
+*:focus {
+	outline: none;
+}
 
 #inputDisplayer {
 	display: block;
