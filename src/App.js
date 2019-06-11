@@ -24,7 +24,7 @@ class App extends Component {
 
 		console.log(e);
 		let a = e.timeStamp;
-		let str = (a - prev).toFixed(3).toString();
+		let str = `${(a - prev).toFixed(3).toString()} ms`;
 		prev = a;
 		const display = document.getElementById('inputDisplayer');
 		const msg = document.createElement('div');
@@ -39,15 +39,17 @@ class App extends Component {
 		// 	return <div>{`${str.toString()}`}</div>;
 		// });
 		return (
-			<div
-				id="inputDisplayer"
-				tabIndex="0"
-				onKeyDown={this.eventHandler}
-				onKeyUp={this.eventHandler}
-				onMouseDown={this.eventHandler}
-				onMouseUp={this.eventHandler}
-				onWheel={this.eventHandler}>
-				PERFORM INPUTS HERE
+			<div>
+				<h3>perform inputs below</h3>
+				<div
+					id="inputDisplayer"
+					tabIndex="0"
+					onKeyDown={this.eventHandler}
+					onKeyUp={this.eventHandler}
+					onMouseDown={this.eventHandler}
+					onMouseUp={this.eventHandler}
+					onWheel={this.eventHandler}
+				/>
 			</div>
 		);
 	}
