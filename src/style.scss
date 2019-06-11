@@ -1,0 +1,18 @@
+body {
+	font-size: 15px;
+	display: flex;
+	justify-content: center;
+}
+
+.App {
+	display: block;
+	width: 33rem;
+	height: 40rem;
+	background-color: gray;
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	:last-child {
+		background-color: aqua;
+	}
+}

@@ -1,29 +1,30 @@
 import React, { Component } from 'react';
-
+import './style.css';
 let prev = 0;
 class App extends Component {
 	constructor() {
 		super();
-
-		this.state = {
-			mainStr: []
-		};
 		this.eventHandler.bind = this.eventHandler.bind(this);
 	}
 
 	eventHandler = (e) => {
 		e.persist();
 		let a = e.timeStamp;
-		this.setState({ mainStr: [ ...this.state.mainStr, (a - prev).toString() ] });
+		let str = (a - prev).toFixed(3).toString();
 		prev = a;
+		const display = document.getElementById('1234');
+		const msg = document.createElement('div');
+		msg.innerText = str;
+		display.append(msg);
 	};
 
 	render() {
-		const abcd = this.state.mainStr.map((str) => {
-			return <div>`\n${str.toString()}`</div>;
-		});
+		// const abcd = this.state.mainStr.map((str) => {
+		// 	return <div>{`${str.toString()}`}</div>;
+		// });
 		return (
 			<div
+				id="1234"
 				tabIndex="0"
 				className="App"
 				onKeyDown={this.eventHandler}
@@ -32,7 +33,6 @@ class App extends Component {
 				onMouseUp={this.eventHandler}
 				onWheel={this.eventHandler}>
 				PERFORM INPUTS HERE
-				{abcd}
 			</div>
 		);
 	}

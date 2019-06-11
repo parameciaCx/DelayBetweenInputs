@@ -1,0 +1,23 @@
+body {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.App {
+  display: block;
+  width: 33rem;
+  height: 40rem;
+  background-color: gray;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.App :last-child {
+  background-color: aqua;
+}
+/*# sourceMappingURL=style.css.map */
