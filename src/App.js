@@ -39,10 +39,12 @@ class App extends Component {
 		// 	return <div>{`${str.toString()}`}</div>;
 		// });
 		return (
-			<div>
+			<div id="inputComp">
 				<h3>perform inputs below</h3>
+
+				<h3>inputs displayed</h3>
 				<div
-					id="inputDisplayer"
+					id="getInputs"
 					tabIndex="0"
 					onKeyDown={this.eventHandler}
 					onKeyUp={this.eventHandler}
@@ -50,6 +52,8 @@ class App extends Component {
 					onMouseUp={this.eventHandler}
 					onWheel={this.eventHandler}
 				/>
+
+				<div id="inputDisplayer" />
 			</div>
 		);
 	}
